@@ -1,16 +1,17 @@
 VideoRecorder
 =============
 
-VideoRecorder generate a video from several OpenGL screens. It uses OpenGL and OpenCV to achieve this objective.
+VideoRecorder generate a video from several OpenGL screens. It uses OpenGL and OpenCV to achieve this objective. The kind of output is defined be the codec used.
 
-VideRecorder outputs png.
+The full list of codecs may be found here: http://www.fourcc.org/codecs.php
+To be sure, one should restricted oneself to codecs listed here: http://opencv.willowgarage.com/wiki/documentation/cpp/highgui/VideoWriter
 
 #Usage
 
-To use VideoRecorder, simply include the VideoRecorder.hpp header and make a instance of VideoRecoder. Do notice that not all combinations of width and height are acceptable, due to codec restrictions.
+To use VideoRecorder, simply include the VideoRecorder.hpp header and make a instance of VideoRecoder. Do notice that some combinations of width and height might not acceptable, due to codec restrictions.
 
 ```C++
-VideoRecorder(std::string name, int width_, int height_);
+VideoRecorder(std::string name, std::string codec, int frameRate, int width_, int height_): width(width_), height(height_){
 ```
 
 Then, after drawing an OpenGL screen, call the GetFrame() method.
