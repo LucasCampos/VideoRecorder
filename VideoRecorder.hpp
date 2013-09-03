@@ -1,7 +1,7 @@
 /*
  * Author:	Lucas Costa Campos
  * Email: 	Rmk236@gmail.com
- * Version:	0.01
+ * Version:	0.02
  * License:	GNU General Public License
  * 		Copyright: 2013 Lucas Costa Campos
  * Website: 	https://github.com/LucasCampos/VideoRecorder
