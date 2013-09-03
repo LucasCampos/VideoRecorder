@@ -45,7 +45,8 @@ int main() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	//Create our video recorder. The video generated will be named "output.avi"
-	VideoRecorder video("output.avi", width, height);
+	VideoRecorder videoMKV("output.mkv", "PIM1", 20, width, height);
+	VideoRecorder videoAVI("output.avi", "MJPG", 20, width, height);
 
 	//Runs a hundred frames of random colours
 	for (int i=0; i<100; i++) {
@@ -59,7 +60,8 @@ int main() {
 		glEnd();
 		glfwSwapBuffers();
 
-		video.GetFrame();
+		videoAVI.GetFrame();
+		videoMKV.GetFrame();
 	}
 }
 

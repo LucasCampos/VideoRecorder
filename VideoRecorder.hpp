@@ -40,8 +40,8 @@ class VideoRecorder {
 		int height;
 		cv::Mat colorsCV;
 	public:
-		VideoRecorder(std::string name, int width_, int height_): width(width_), height(height_){
-			video.open(name, CV_FOURCC('M','J','P','G'), 20, cv::Size(width,width));
+		VideoRecorder(std::string name, std::string codec, int frameRate, int width_, int height_): width(width_), height(height_){
+			video.open(name, CV_FOURCC(codec[0],codec[1],codec[2],codec[3]), frameRate, cv::Size(width,width));
 			colorsCV = cv::Mat(width, height, CV_8UC3);
 		};
 

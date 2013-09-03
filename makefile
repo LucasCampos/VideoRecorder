@@ -17,7 +17,7 @@ $(EXECS): $(OBJECTS)
 	$(CC) -c $(SOURCES) $(LIBS) 
 
 clean:
-	/bin/rm -f *.o *.mod $(EXECS) *.gnu *.sh *.gif
+	/bin/rm -f *.o *.mod $(EXECS) output.mkv output.avi
 
 run: $(EXECS)
 	./$(EXECS)
