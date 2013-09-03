@@ -4,6 +4,7 @@ VideoRecorder
 VideoRecorder generate a video from several OpenGL screens. It uses OpenGL and OpenCV to achieve this objective. The kind of output is defined be the codec used.
 
 The full list of codecs may be found here: http://www.fourcc.org/codecs.php
+
 To be sure, one should restricted oneself to codecs listed here: http://opencv.willowgarage.com/wiki/documentation/cpp/highgui/VideoWriter
 
 #Usage
