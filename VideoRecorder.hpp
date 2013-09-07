@@ -56,6 +56,9 @@ class VideoRecorder {
 				std::cerr << "OpenGL returned no pixels to VideoRecorder" << std::endl;
 			video.write(colorsCV);
 		}
+		~VideoRecorder() {
+			video.release();
+		}
 };
 
 
