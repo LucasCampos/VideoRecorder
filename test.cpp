@@ -1,5 +1,5 @@
 /*
- *     This file is part of libepswriter.
+ *     This file is part of VINV.
  *
  *     libepswriter is free software; you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
