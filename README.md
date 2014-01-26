@@ -27,7 +27,7 @@ To link OpenCV and OpenGL on Debian-based linux distros, one can use
 g++ sourceCode.cpp -lopencv_highgui -lopencv_core -lGL
 ```
 
-To compile the example, GLFW is required.
+To compile the example, GLFW is required. There are two source codes, one for GLFW2, another for GLFW3.
 
 #Restrictions
 

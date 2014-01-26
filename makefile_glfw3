@@ -1,0 +1,24 @@
+CC          = g++
+MAKE        = make
+SHELL       = /bin/sh
+
+FOLDERS =
+
+LIBS =  `pkg-config --cflags glfw3` `pkg-config --static --libs glfw3` -lopencv_highgui -lopencv_core
+EXECS = test_glfw3
+SOURCES = test_glfw3.cpp
+HEADERS = VideoRecorder.hpp
+OBJECTS = $(SOURCES:.cpp=.o)
+
+$(EXECS): $(OBJECTS)
+	$(CC) $(OBJECTS) -o $@ $(LIBS)
+
+.cpp.o: $(HEADERS)
+	$(CC) -c $(SOURCES) $(LIBS) 
+
+clean:
+	/bin/rm -f *.o *.mod $(EXECS) output.mkv output.avi
+
+run: $(EXECS)
+	./$(EXECS)
+	
